@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
-import { Icons } from "./icons/icons";
+import { Icons } from "../icons/icons";
 import {
   Form,
   FormControl,

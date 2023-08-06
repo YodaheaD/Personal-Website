@@ -1,31 +1,36 @@
-import { Metadata } from "next"
-import Image from "next/image"
-import { Activity, CreditCard, DollarSign, Download, Users } from "lucide-react"
+import { Metadata } from "next";
+import Image from "next/image";
+import {
+  Activity,
+  CreditCard,
+  DollarSign,
+  Download,
+  Users,
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { MainNav } from "./main-nav"
- 
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MainNav } from "./sub/main-nav";
 
-import { CalendarDateRangePicker } from "@/components/ui/dashboard/date-range-picker"
+import { CalendarDateRangePicker } from "@/components/ui/dashboard/date-range-picker";
 
-import { Overview } from "@/components/ui/dashboard/overview"
-import { RecentSales } from "@/components/ui/dashboard/recent-sales"
-import { Search } from "@/components/ui/dashboard/search"
-import TeamSwitcher from "@/components/ui/dashboard/team-switcher"
-import { UserNav } from "@/components/ui/dashboard/user-nav"
+import { Overview } from "@/components/ui/dashboard/overview";
+import { RecentSales } from "@/components/ui/dashboard/recent-sales";
+import { Search } from "@/components/ui/dashboard/search";
+import TeamSwitcher from "@/components/ui/dashboard/team-switcher";
+import { UserNav } from "@/components/ui/dashboard/user-nav";
 
 export const metadata: Metadata = {
   title: "Dashboard",
   description: "Example dashboard app using the components.",
-}
+};
 
 export default function DashboardPage() {
   return (
@@ -164,5 +169,5 @@ export default function DashboardPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

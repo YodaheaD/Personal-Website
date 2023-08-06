@@ -1,11 +1,7 @@
-## Data repository for Azure Tables
+## NextJS Website Boilerplate
 ### By: Yoda Daniel
 
-### This application is part of a project to create a full-stack app with Azure Tables.
-
-- The backend consists of an Express api configured with a local Azure Table storage. 
-
-- This app, is the frontend side. Designed to do things like view, graph, or delete data within the Azure Table storage.
+### This application is a boilerplate for a NextJS project.
 
 ### Tools used on Frontend:
 
@@ -22,4 +18,8 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Changes 
+
+1.1 - Log/Reg page, Components folders
+
+* Separated components into  a sub folder. Pulled the Login page from other project here. 

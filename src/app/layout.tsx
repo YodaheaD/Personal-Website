@@ -2,12 +2,10 @@
 import { fontSans } from "@/lib/fonts"
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Providers from '@/components/Providers'
-import { cn } from "@/lib/utils"
+ import { cn } from "@/lib/utils"
 import { siteConfig } from '@/config/site' 
-import DashboardTabs from '@/components/dashboard-tabs'
-import { Metadata } from 'next'
-import { ThemeProvider } from '@/components/theme-provider'
+ import { Metadata } from 'next'
+import { ThemeProvider } from '@/components/sub/theme-provider'
 import { SiteHeader } from '@/components/site-header'
 
 const inter = Inter({ subsets: ['latin'] })
