@@ -87,13 +87,10 @@ const LogRegPage = () => {
                   isAnimated ? "translate-x-[20%]" : "translate-x-0"
                 }`}
               >
-                {/*<RightOverlayContent
-      isAnimated={isAnimated}
-      setIsAnimated={setIsAnimated}
-    />*/}
+          
                 <div className="p-8 text-center">
                   <h1 className="text-[min(4vw)] font-bold text-white mb-4">
-                    Don't have an account ?
+                    New user ?
                   </h1>
 
                   <h5 className="text-[min(2vw)]  text-white">

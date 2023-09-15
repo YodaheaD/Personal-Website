@@ -7,9 +7,9 @@ import { siteConfig } from '@/config/site'
  import { Metadata } from 'next'
 import { ThemeProvider } from '@/components/sub/theme-provider'
 import { SiteHeader } from '@/components/site-header'
+import { Toaster } from "react-hot-toast"
 
-const inter = Inter({ subsets: ['latin'] })
-
+ 
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -45,6 +45,26 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
+              <Toaster
+              position="top-center"
+              reverseOrder={false}
+              gutter={8}
+              containerClassName=""
+              containerStyle={{}}
+              toastOptions={{
+                // Define default options
+                className: "",
+                duration: 2000,
+                style: {
+                  background: "#363636",
+                  color: "#fff",
+                  border: "1px solid #509f51",
+                },
+
+                // Default options for specific types
+                 
+              }}
+            />
               <div className="flex-1">{children}</div>
             </div>
           </ThemeProvider>

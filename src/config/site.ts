@@ -10,8 +10,16 @@ export const siteConfig = {
       href: "/view",
     },
     {
-      title: "Notifications",
+      title: "Images",
       href: "/images",
+    },
+    {
+      title: "Analytics",
+      href: "/analytics",
+    },
+    {
+      title: "Upload",
+      href: "/upload",
     },
     {
       title: "About",

@@ -1,5 +1,3 @@
-import HomePage from "@/components/home-page";
-import { NotificationsCard } from "@/components/notis-card";
 import {
   Card,
   CardContent,
@@ -7,7 +5,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,9 +15,9 @@ export default function Home() {
           <CardDescription>Information about the creator.</CardDescription>
         </CardHeader>
         <CardContent>
-          I a, a recent graduate in Computer Engineering from Kennesaw State
+          I am a recent graduate in Computer Engineering from Kennesaw State
           University currently working as a Software Engineer. My professional
-          interests in Full Stack development, IoT, API's and databases.
+          interests in Full Stack development, IoT, APIs and databases.
         </CardContent>
       </Card>
     </div>

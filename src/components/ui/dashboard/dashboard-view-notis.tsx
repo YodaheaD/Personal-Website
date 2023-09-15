@@ -1,66 +1,89 @@
+"use client";
 
-"use client"
-import { NotificationsCard } from "@/components/notis-card";
- 
-import { Label } from "recharts";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "../card";
-import { Input } from "../input";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "../card";
 import { Overview } from "./overview";
+import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
+import { RecentSales } from "./recent-sales";
 
-
-
-
-export default function DashboardNotisTab(){
-
-return(
-<div className="flex flex-row max-h-fit mt-4 justify-evenly">
-<div >
-  <Card className="w-[350px]">
-    <CardHeader>
-      <CardTitle>Create project</CardTitle>
-      <CardDescription>
-        Deploy your new project in one-click.
-      </CardDescription>
-    </CardHeader>
-    <CardContent>
-      <form>
-        <div className="grid w-full items-center gap-4">
-          <div className="flex flex-col space-y-1.5">
-            <Label htmlFor="name">Name</Label>
-            <Input id="name" placeholder="Name of your project" />
-          </div>
-          <div className="flex flex-col space-y-1.5">
-            <Label htmlFor="name">Framework</Label>
-          </div>
-        </div>
-      </form>
-    </CardContent>
-    <CardFooter className="flex justify-between">
-     
-    </CardFooter>
-  </Card>
-</div>
-
-<div>
-  <Card className="w-[350px]">
-    <CardHeader>
-      <CardTitle>Monthly revenue</CardTitle>
-      <CardDescription>
-        Below is the revenue values for latest 12 months.
-      </CardDescription>
-    </CardHeader>
-    <CardContent>
-      <Overview />
-    </CardContent>
-    <CardFooter className="flex justify-between">
-      * all sales values pending live updates
-    </CardFooter>
-  </Card>
-</div>
-
-<div>
-  <NotificationsCard />
-</div>
-
-</div>
-)}
+export default function DashboardPage() {
+  return (
+    <>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+            <DollarSign className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">$45,231.89</div>
+            <p className="text-xs text-muted-foreground">
+              +20.1% from last month
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
+            <Users className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+2350</div>
+            <p className="text-xs text-muted-foreground">
+              +180.1% from last month
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Sales</CardTitle>
+            <CreditCard className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+12,234</div>
+            <p className="text-xs text-muted-foreground">
+              +19% from last month
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Active Now</CardTitle>
+            <Activity className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+573</div>
+            <p className="text-xs text-muted-foreground">
+              +201 since last hour
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+        <Card className="col-span-4">
+          <CardHeader>
+            <CardTitle>Overview</CardTitle>
+          </CardHeader>
+          <CardContent className="pl-2">
+            <Overview />
+          </CardContent>
+        </Card>
+        <Card className="col-span-3">
+          <CardHeader>
+            <CardTitle>Recent Sales</CardTitle>
+            <CardDescription>You made 265 sales this month.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <RecentSales />
+          </CardContent>
+        </Card>
+      </div>
+    </>
+  );
+}

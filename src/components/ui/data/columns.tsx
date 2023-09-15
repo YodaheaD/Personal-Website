@@ -1,7 +1,6 @@
 "use client"
 
-import { ColumnDef } from "@tanstack/react-table"
-import { ArrowUpDown, MoreHorizontal } from "lucide-react"
+ import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 import { Button } from "../button"
 
 // This type is used to define the shape of our data.
@@ -13,11 +12,11 @@ export type Payment = {
   email: string
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: any = [
   {
     accessorKey: "id",
     //header: "Id",
-    header: ({ column }) => {
+    header: ({ column }:any) => {
       return (
         <Button
           variant="ghost"
@@ -32,7 +31,7 @@ export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "name",
     //header: "Name",
-    header: ({ column }) => {
+    header: ({ column }:any) => {
       return (
         <Button
           variant="ghost"
@@ -46,7 +45,7 @@ export const columns: ColumnDef<Payment>[] = [
   },  {
     accessorKey: "email",
     //header: "Email",
-    header: ({ column }) => {
+    header: ({ column }:any) => {
       return (
         <Button
           variant="ghost"
@@ -61,7 +60,7 @@ export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "role",
     //header: "Role",
-    header: ({ column }) => {
+    header: ({ column }:any) => {
       return (
         <Button
           variant="ghost"
