@@ -17,13 +17,13 @@ import { Separator } from "../separator";
 
 export default function DashboardPage() {
   const customContent = [
-    <div className="w-full text-2xl mt-8">
+    <div key={Math.random()} className="w-full text-2xl mt-8">
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         My Background
       </h1>
       <p>Ethiopian-Eritrean American raised in Peachtree City, Georgia.</p>
     </div>,
-    <div className="w-full text-2xl mt-8">
+    <div key={Math.random()} className="w-full text-2xl mt-8">
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         My College Experience
       </h1>{" "}
@@ -32,7 +32,7 @@ export default function DashboardPage() {
         graduated with a Bachelors of Science in Computer Engineering.
       </p>
     </div>,
-    <div className="w-full text-2xl mt-8">
+    <div key={Math.random()} className="w-full text-2xl mt-8">
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         What I do now...
       </h1>
@@ -41,7 +41,7 @@ export default function DashboardPage() {
         databases, APIs, cloud services and others.{" "}
       </p>
     </div>,
-    <div className="w-full text-2xl mt-8">
+    <div key={Math.random()} className="w-full text-2xl mt-8">
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         What I do now... for Fun!
       </h1>
