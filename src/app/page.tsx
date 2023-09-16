@@ -6,11 +6,12 @@ export default function Home() {
 
   return (
     <div className=" container mx-auto py-10 ">
-      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl mb-2">
-        Dashboard
-      </h1>
+  
       <div>
-        <Card className=" p-4 m-4 shadow-md">
+      <h1 className="text-4xl font-extrabold leading-tight tracking-tighter ml-8 mb-2">
+              Yodahea Daniel
+            </h1>
+        <Card className=" p-4 m-4 shadow-md mx-auto w-10/12 ">
           <DashboardTabs />
         </Card>
       </div>

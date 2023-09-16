@@ -8,80 +8,98 @@ import {
   CardContent,
   CardFooter,
 } from "../card";
-import { Overview } from "./overview";
-import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
-import { RecentSales } from "./recent-sales";
+
+import { ScrollArea } from "../scroll-area";
+import { Chrono } from "react-chrono";
+import Link from "next/link";
+import Contacts from "@/components/display-contact";
+import { Separator } from "../separator";
 
 export default function DashboardPage() {
+  const customContent = [
+    <div className="w-full text-2xl mt-8">
+      <h1 className="font-semibold  font-sans text-blue-500 mb-2">
+        My Background
+      </h1>
+      <p>Ethiopian-Eritrean American raised in Peachtree City, Georgia.</p>
+    </div>,
+    <div className="w-full text-2xl mt-8">
+      <h1 className="font-semibold  font-sans text-blue-500 mb-2">
+        My College Experience
+      </h1>{" "}
+      <p>
+        Attended Kennesaw State University-Engineering and Technology and
+        graduated with a Bachelors of Science in Computer Engineering.
+      </p>
+    </div>,
+    <div className="w-full text-2xl mt-8">
+      <h1 className="font-semibold  font-sans text-blue-500 mb-2">
+        What I do now...
+      </h1>
+      <p>
+        Currently a Software Engineer working on full-stack web applications,
+        databases, APIs, cloud services and others.{" "}
+      </p>
+    </div>,
+    <div className="w-full text-2xl mt-8">
+      <h1 className="font-semibold  font-sans text-blue-500 mb-2">
+        What I do now... for Fun!
+      </h1>
+      <p>
+        {" "}
+        Some of my current interests are traveling, language learning, history,
+        playing soccer, outdoor activities, and many others!{" "}
+      </p>
+    </div>,
+  ];
+
+  const buildTimeline = () => {
+    const items = [{}, {}, {}, {}];
+
+    return (
+      <Chrono items={items} mode="VERTICAL">
+        {customContent}
+      </Chrono>
+    );
+  };
+
   return (
     <>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+          <CardHeader className="">
+            <CardTitle className="text-2xl font-medium">
+              Welcome to my Website!
+            </CardTitle>
+            <CardDescription className="text-lg">
+              Find out about me or use my socials for contact.{" "}
+            </CardDescription>
           </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">$45,231.89</div>
-            <p className="text-xs text-muted-foreground">
-              +20.1% from last month
-            </p>
-          </CardContent>
         </Card>
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+          <CardHeader>
+            <CardTitle>Contact Me</CardTitle>
+            <CardDescription>Some of my contacts are: </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">+2350</div>
-            <p className="text-xs text-muted-foreground">
-              +180.1% from last month
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Sales</CardTitle>
-            <CreditCard className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">+12,234</div>
-            <p className="text-xs text-muted-foreground">
-              +19% from last month
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Now</CardTitle>
-            <Activity className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">+573</div>
-            <p className="text-xs text-muted-foreground">
-              +201 since last hour
-            </p>
+            <Contacts />
           </CardContent>
         </Card>
       </div>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="col-span-4">
-          <CardHeader>
-            <CardTitle>Overview</CardTitle>
-          </CardHeader>
-          <CardContent className="pl-2">
-            <Overview />
-          </CardContent>
-        </Card>
-        <Card className="col-span-3">
-          <CardHeader>
-            <CardTitle>Recent Sales</CardTitle>
-            <CardDescription>You made 265 sales this month.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <RecentSales />
-          </CardContent>
+      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
+        <Card className="col-span-4 h-[450px]">
+          <ScrollArea className=" h-[450px] p-4">
+            {" "}
+            <CardHeader className="  sticky top-0 z-40 w-full bg-white">
+              <CardTitle className="text-3xl font-medium ">About Me</CardTitle>
+              <Separator />
+            </CardHeader>
+            <CardContent className="pl-2 h-2/3">
+              <Link href="/about" key={Math.random()}>
+                {buildTimeline()}
+              </Link>
+            </CardContent>
+          </ScrollArea>
         </Card>
       </div>
     </>
