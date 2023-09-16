@@ -11,7 +11,7 @@ export default function Home() {
       <h1 className="text-4xl font-extrabold leading-tight tracking-tighter ml-8 mb-2">
               Yodahea Daniel
             </h1>
-        <Card className=" p-4 m-4 shadow-md mx-auto w-10/12 ">
+        <Card className=" p-4 m-4 shadow-md mx-auto md:w-10/12 sm:w-11/12">
           <DashboardTabs />
         </Card>
       </div>

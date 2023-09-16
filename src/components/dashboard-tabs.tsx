@@ -27,7 +27,7 @@ export default function DashboardTabs() {
         <Card className="p-5 shadow-md  flex flex-col gap-2">
           <CardTitle className="text-3xl">Contact Me</CardTitle>
           <CardDescription className="text-lg">Some of my contacts are: </CardDescription>
-          <div className="w-[55%] p-3">
+          <div className="">
             {" "}
             <Contacts />
           </div>
