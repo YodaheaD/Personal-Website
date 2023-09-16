@@ -21,13 +21,13 @@ export default function DashboardPage() {
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         My Background
       </h1>
-      <p>Ethiopian-Eritrean American raised in Peachtree City, Georgia.</p>
+      <p className="text-sm md:text-lg">Ethiopian-Eritrean American raised in Peachtree City, Georgia.</p>
     </div>,
     <div key={Math.random()} className="w-full text-2xl mt-8">
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         My College Experience
       </h1>{" "}
-      <p>
+      <p  className="text-sm md:text-lg">
         Attended Kennesaw State University-Engineering and Technology and
         graduated with a Bachelors of Science in Computer Engineering.
       </p>
@@ -36,7 +36,7 @@ export default function DashboardPage() {
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         What I do now...
       </h1>
-      <p>
+      <p  className="text-sm md:text-lg">
         Currently a Software Engineer working on full-stack web applications,
         databases, APIs, cloud services and others.{" "}
       </p>
@@ -45,7 +45,7 @@ export default function DashboardPage() {
       <h1 className="font-semibold  font-sans text-blue-500 mb-2">
         What I do now... for Fun!
       </h1>
-      <p>
+      <p  className="text-sm md:text-lg">
         {" "}
         Some of my current interests are traveling, language learning, history,
         playing soccer, outdoor activities, and many others!{" "}
