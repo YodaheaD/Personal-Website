@@ -95,10 +95,8 @@ export default function DashboardPage() {
               <Separator />
             </CardHeader>
             <CardContent className="pl-2 h-2/3">
-              <Link href="/about" key={Math.random()}>
-                {buildTimeline()}
-              </Link>
-            </CardContent>
+                 {buildTimeline()}
+             </CardContent>
           </ScrollArea>
         </Card>
       </div>
